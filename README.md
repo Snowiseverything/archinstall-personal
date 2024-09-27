@@ -17,13 +17,13 @@ This script uses environment variables for sensitive information. Never hardcode
 ## Usage
 
 1. Boot into the Arch Linux live environment.
-
+      
 2. Connect to the internet.
 
 3. Clone this repository:
    ```
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/Snowiseverything/archinstall-personal/
+   cd archinstall-personal
    ```
 
 4. Make the script executable:
@@ -33,8 +33,8 @@ This script uses environment variables for sensitive information. Never hardcode
 
 5. Set the required environment variables:
    ```
-   export USERNAME="snow"
-   export HOSTNAME="freezer"
+   export USERNAME="uname"
+   export HOSTNAME="hname"
    export ROOT_PASSWORD="your_root_password"
    export LUKS_PASSWORD="your_encryption_password"
    ```
