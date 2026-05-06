@@ -51,6 +51,11 @@ $EDITOR arch_install.sh
 - Internet connection
 - Target drive (will be wiped)
 
+Find your target drive with:
+```bash
+lsblk -d -o NAME,SIZE,TYPE,MODEL
+```
+
 ## What Gets Installed
 
 - Base system + linux + linux-firmware
