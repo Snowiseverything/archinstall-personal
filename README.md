@@ -1,5 +1,12 @@
 # archinstall-personal
 
+<p align="center">
+  <a href="https://github.com/Snowiseverything/archinstall-personal/stargazers"><img src="https://shieldcn.dev/github/stars/Snowiseverything/archinstall-personal.svg" alt="stars" /></a>
+  <a href="https://github.com/Snowiseverything/archinstall-personal/fork"><img src="https://shieldcn.dev/github/forks/Snowiseverything/archinstall-personal.svg" alt="forks" /></a>
+  <a href="https://github.com/Snowiseverything/archinstall-personal/blob/main/LICENSE"><img src="https://shieldcn.dev/github/license/Snowiseverything/archinstall-personal.svg" alt="license" /></a>
+  <a href="https://github.com/Snowiseverything/archinstall-personal/commits"><img src="https://shieldcn.dev/github/last-commit/Snowiseverything/archinstall-personal.svg" alt="last commit" /></a>
+</p>
+
 # Customized Arch Linux Installation Script
 
 This repository contains a script for installing Arch Linux with BTRFS, encryption, and the Xfce desktop environment. The script is customized for a specific user setup but can be modified as needed.
