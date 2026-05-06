@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://github.com/Snowiseverything/archinstall-personal/stargazers"><img src="https://shieldcn.dev/github/stars/Snowiseverything/archinstall-personal.svg" alt="stars" /></a>
   <a href="https://github.com/Snowiseverything/archinstall-personal/fork"><img src="https://shieldcn.dev/github/forks/Snowiseverything/archinstall-personal.svg" alt="forks" /></a>
-  <a href="https://github.com/Snowiseverything/archinstall-personal/blob/main/LICENSE"><img src="https://shieldcn.dev/github/license/Snowiseverything/archinstall-personal.svg" alt="license" /></a>
+  <a href="https://github.com/Snowiseverything/archinstall-personal/blob/main/LICENSE"><img src="https://shieldcn.dev/badge/license-GPL--3.0-blue.svg" alt="license" /></a>
   <a href="https://github.com/Snowiseverything/archinstall-personal/commits"><img src="https://shieldcn.dev/github/last-commit/Snowiseverything/archinstall-personal.svg" alt="last commit" /></a>
 </p>
 
@@ -101,7 +101,7 @@ This is a personal script, but suggestions for improvements are welcome. Please 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
 ## Disclaimer
 
