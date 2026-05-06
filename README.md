@@ -7,102 +7,78 @@
   <a href="https://github.com/Snowiseverything/archinstall-personal/commits"><img src="https://shieldcn.dev/github/last-commit/Snowiseverything/archinstall-personal.svg" alt="last commit" /></a>
 </p>
 
-# Customized Arch Linux Installation Script
+```
+        .-.
+       (   )
+        '-'
+   Arch Linux Installer
+```
 
-This repository contains a script for installing Arch Linux with BTRFS, encryption, and the Xfce desktop environment. The script is customized for a specific user setup but can be modified as needed.
+## Features
 
-## ⚠️ Security Warning
+| Feature | Description |
+|---------|-------------|
+| **BTRFS** | Subvolumes for `@`, `@home`, `@swap` with zstd compression |
+| **LUKS** | Full disk encryption (LVM on LUKS) |
+| **Xfce** | Lightweight desktop with LightDM |
+| **GRUB** | EFI bootloader with encryption support |
+| **NetworkManager** | Out-of-the-box networking |
 
-This script uses environment variables for sensitive information. Never hardcode passwords or sensitive data directly in the script or commit them to the repository.
+## Quick Start
 
-## Prerequisites
+```bash
+git clone https://github.com/Snowiseverything/archinstall-personal/
+cd archinstall-personal
+chmod +x arch_install.sh
 
-- Arch Linux live environment
+# Set environment variables (DO NOT hardcode)
+export USERNAME="youruser"
+export HOSTNAME="yourhostname"
+export ROOT_PASSWORD="yourpassword"
+export LUKS_PASSWORD="yourpassword"
+
+# Edit DRIVE in script (e.g., /dev/sda)
+$EDITOR arch_install.sh
+
+# Run
+./arch_install.sh
+```
+
+## Requirements
+
+- Arch Linux live environment (ISO)
+- UEFI firmware
 - Internet connection
-- Basic knowledge of Linux and disk partitioning
+- Target drive (will be wiped)
 
-## Usage
+## What Gets Installed
 
-1. Boot into the Arch Linux live environment.
-      
-2. Connect to the internet.
-
-3. Clone this repository:
-   ```
-   git clone https://github.com/Snowiseverything/archinstall-personal/
-   cd archinstall-personal
-   ```
-
-4. Make the script executable:
-   ```
-   chmod +x arch_install.sh
-   ```
-
-5. Set the required environment variables:
-   ```
-   export USERNAME="uname"
-   export HOSTNAME="hname"
-   export ROOT_PASSWORD="your_root_password"
-   export LUKS_PASSWORD="your_encryption_password"
-   ```
-
-6. Review and modify the script if necessary, especially the `DRIVE` variable to match your target drive.
-
-7. Run the script:
-   ```
-   ./arch_install.sh
-   ```
+- Base system + linux + linux-firmware
+- Xfce4 + xorg + LightDM
+- NetworkManager
+- GRUB bootloader
+- Your user with sudo access
 
 ## Customization
 
-- Modify the script to change partition sizes, packages, or other configurations as needed.
-- The script currently installs Xfce. You can change this to another desktop environment or window manager for a more minimal setup.
+Edit these variables in the script before running:
 
-## Recommendations for a Minimal Linux Installation
+```bash
+DRIVE="/dev/sdX"      # Target drive
+BOOT_SIZE="512MiB"    # Boot partition size
+SWAP_SIZE="16GiB"     # Swap size
+ROOT_SIZE="50GiB"     # Root partition size
+```
 
-1. **Choose lightweight software:**
-   - Consider using a lightweight window manager like i3, bspwm, or dwm instead of Xfce.
-   - Use lightweight alternatives to common applications (e.g., pcmanfm instead of nautilus for file management).
-
-2. **Minimize installed packages:**
-   - Only install what you need. You can always add more later.
-   - Consider using the `base` package instead of `base-devel` if you don't need development tools.
-
-3. **Use lightweight system services:**
-   - Consider alternatives like elogind instead of systemd for session management.
-   - Use lightweight alternatives for other system services where possible.
-
-4. **Optimize your kernel:**
-   - Use a custom kernel configuration to remove unnecessary modules and features.
-
-5. **Utilize BTRFS features:**
-   - Use BTRFS compression to save disk space.
-   - Leverage BTRFS snapshots for system backups and easy rollbacks.
-
-6. **Implement a robust update strategy:**
-   - Regularly update your system, but be cautious with rolling releases.
-   - Use BTRFS snapshots before major updates to easily roll back if needed.
-
-7. **Security considerations:**
-   - Implement a firewall (e.g., ufw or iptables).
-   - Use strong passwords and consider two-factor authentication where possible.
-   - Regularly audit your installed packages and remove unnecessary ones.
-
-## Additional Notes
-
-- This script sets up full disk encryption for improved security.
-- The BTRFS filesystem allows for easy snapshots and more flexible storage management.
-- Modify the timezone in the script from UTC to your local timezone if needed.
-- After installation, change all passwords to strong, unique passwords.
-
-## Contributing
-
-This is a personal script, but suggestions for improvements are welcome. Please open an issue to discuss potential changes.
+Change timezone in the script at:
+```bash
+ln -sf /usr/share/zoneinfo/UTC /etc/localtime
+```
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+GPL v3.0 - See [LICENSE](LICENSE)
 
 ## Disclaimer
 
-Use this script at your own risk. Always backup your data before performing system installations or modifications.
+Use at your own risk. Always back up important data.
